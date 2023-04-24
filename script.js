@@ -86,7 +86,7 @@ for (let i = 0; i < stadiums.length; i++) {
 //the event listener for my button click
 button.addEventListener('click', async (event) => {
     try {
-    event.preventDefault()//still don't know why I need this but my browser tries to refresh on a button click without it
+    event.preventDefault()//still don't know why I need this but my browser tries to refresh on a button click without this
     document.getElementById("teamMap").style.display = ""//code to display the teamMap element that was turned off in the HTML
     
     const teamSearch = document.querySelector("#teamInput").value //https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams get abbreviation from here
