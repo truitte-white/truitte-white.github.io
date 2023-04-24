@@ -3,10 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>I'm a hosted GitHub Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="script.js"></script>
+    <title>NFL API Calls</title>
 </head>
-<body>
-    
-</body>
+</a>
+    <body>
+        <div id="frame">
+            <div id="map"></div>
+            <a href="https://www.nfl.com/" target="_blank"><img class="logoNFL" src="https://assets.stickpng.com/images/5895deb9cba9841eabab6099.png"></a>
+                <form>
+                    <input class="input" id="teamInput" type="text" placeholder="Enter Team Abbreviation" />
+                    <button class="button" id="searchButton">Search Team Abbreviation</button>
+                </form>
+            <div id="teamLogos"></div>
+            <h1 id="teamName"></h1>
+            <p id="recordsWinLoss"></p>
+            <h2 id="playerStatsTitle"></h2>
+            <p id="playerStats"></p>
+            <h2 id="teamStatsTitle"></h2>
+            <p id="teamStats"></p>
+            <h2 id="weatherInfoTitle"></h2>
+            <p id="weatherInfo"></p>
+            <h2 id="venueDataTitle"></h2>
+            <h3 id="venueData"></h3>
+            <div id="venueImages"></div>
+            <div id="teamMap" style="display:none"></div>
+        </div>
+    </body>
 </html>
