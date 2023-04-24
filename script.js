@@ -97,7 +97,7 @@ button.addEventListener('click', async (event) => {
     let teamLocation = teamInfo.location
 
     //had to prove to myself that I was able to pull information from unrelated API's using info from other API's
-    let response = await axios.get(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${teamLocation}&aqi=yes2`)
+    let response = await axios.get(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${teamLocation}&aqi=yes2`)
     let cityTemp = response.data.current.temp_f
     let feelTemp = response.data.current.feelslike_f
     let condition = response.data.current.condition.text
@@ -109,7 +109,7 @@ button.addEventListener('click', async (event) => {
     let humid = response.data.current.humidity
 
     let teamId = teamInfo.id//grabbing the ID of the team from the API above to use on the API below
-    let allTeamInfo = await axios.get(`http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2022/teams/${teamId}`)
+    let allTeamInfo = await axios.get(`https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2022/teams/${teamId}`)
     let venueCapacity = allTeamInfo.data.venue.capacity
     let venueName = allTeamInfo.data.venue.fullName
     let venueImages = allTeamInfo.data.venue.images
